@@ -1,0 +1,30 @@
+import java.util.*;
+import java.io.*;
+
+public class Koncert extends Dogadjaj implements KampanjaInterface
+{
+  protected ArrayList<String> izvodjaci;
+  protected int trajanjeMinute;
+  
+  public Koncert()
+  {
+    super();
+  }
+  
+ 
+  public Koncert(ArrayList<String>izv,int trajanje,String n,Date dp,Date dk,String vp,String vk,String o,Organizator org,ArrayList<Ucesnik>uc,File f)
+  {
+        super(n,dp,dk,vp,vk,o,org,uc,f);
+        izvodjaci=izv;
+        trajanjeMinute=trajanje;
+  }
+  
+  public ArrayList<String> getIzvodjaci()
+  {
+    return izvodjaci;
+  }
+  public int getTrajanjeMinute()
+  {
+    return trajanjeMinute;
+  }
+}

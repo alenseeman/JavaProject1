@@ -1,0 +1,24 @@
+import java.util.*;
+import java.io.*;
+
+public class Ucesnik extends Osoba
+{
+  protected String nazivOrganizacije;
+  
+  public Ucesnik()
+  {
+    super();
+  }
+  
+  public Ucesnik(String no,String i,String p)
+  {
+    super(i,p);
+    nazivOrganizacije=no;
+  }
+  
+  public String getNazivOrganizacije()
+  {
+    return nazivOrganizacije;
+  }
+}
+  

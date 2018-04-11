@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="organizacijadogadjaja.KreirajDogadjajFormaFXMLController">
+   <children>
+      <ComboBox fx:id="vrstaDogadjajaComboBox" layoutX="256.0" layoutY="49.0" prefWidth="150.0" />
+      <Label layoutX="64.0" layoutY="53.0" prefHeight="17.0" prefWidth="105.0" text="Vrsta dogadjaja :">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="14.0" layoutY="14.0" text=" Novi Dogadjaj :" textFill="#004cc7">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nazivDogadjajaLbl" disable="true" graphicTextGap="5.0" layoutX="68.0" layoutY="93.0" text="Naziv dogadjaja :" />
+      <Label fx:id="datumPocetkaLbl" disable="true" graphicTextGap="5.0" layoutX="70.0" layoutY="129.0" text="Datum pocetka :" />
+      <Label fx:id="datumZavrsetkaLbl" disable="true" graphicTextGap="5.0" layoutX="284.0" layoutY="129.0" text="Datum zavrsetka :" />
+      <Label fx:id="vrijemePocetkaLbl" disable="true" graphicTextGap="5.0" layoutX="61.0" layoutY="196.0" text="Vrijeme pocetka :" />
+      <Label fx:id="vrijemeKrajaLbl" disable="true" graphicTextGap="5.0" layoutX="69.0" layoutY="243.0" text="Vrijeme kraja :" />
+      <DatePicker fx:id="datumPocetkaDatePicker" disable="true" layoutX="23.0" layoutY="147.0" />
+      <DatePicker fx:id="datumZavrsetkaDatePicker" disable="true" layoutX="247.0" layoutY="147.0" />
+      <TextField fx:id="nazivDogadjajaTxtFld" disable="true" layoutX="257.0" layoutY="89.0" />
+      <TextField fx:id="vrijemePocetkaTxtFld" disable="true" layoutX="262.0" layoutY="192.0" prefHeight="25.0" prefWidth="75.0" />
+      <TextField fx:id="vrijemeKrajaTxtFld" disable="true" layoutX="262.0" layoutY="239.0" prefHeight="25.0" prefWidth="75.0" />
+      <TextField fx:id="opisTxtFld" disable="true" layoutX="223.0" layoutY="290.0" prefHeight="25.0" prefWidth="217.0" />
+      <Label fx:id="opisLbl" disable="true" layoutX="92.0" layoutY="294.0" text="Opis :" />
+      <Label fx:id="organizatorLabela" disable="true" layoutX="299.0" layoutY="327.0" text="Organizator :" />
+      <ComboBox fx:id="organizatorComboBox" disable="true" layoutX="256.0" layoutY="347.0" prefWidth="150.0" />
+      <Label fx:id="ucesniciLabela" disable="true" layoutX="306.0" layoutY="388.0" text="Ucesnici :" />
+      <ComboBox fx:id="ucesniciComboBox" disable="true" layoutX="256.0" layoutY="406.0" prefWidth="150.0" />
+      <Button fx:id="dodajFajlBtn" disable="true" layoutX="321.0" layoutY="574.0" mnemonicParsing="false" onAction="#klikDodajFajl" text="Dodaj fajlove ..." />
+      <Button fx:id="snimiIzmjeneBtn" disable="true" layoutX="159.0" layoutY="599.0" mnemonicParsing="false" onAction="#klikSnimiIzmjene" prefHeight="38.0" prefWidth="110.0" text="Kreiraj dogadjaj" AnchorPane.leftAnchor="159.0" AnchorPane.rightAnchor="181.0" />
+      <Label fx:id="labelaKompanijaPromocija" layoutX="31.0" layoutY="360.0" prefHeight="50.0" prefWidth="150.0" text="Proizvod ili kompanija za koju se vrsi promocija :" textAlignment="CENTER" visible="false" wrapText="true" />
+      <TextField fx:id="kompanijaPromocijaTxtField" layoutX="32.0" layoutY="406.0" visible="false" />
+      <Label fx:id="labelaTemaPredavanja" layoutX="89.0" layoutY="327.0" text="Tema :" visible="false" />
+      <Label fx:id="labelaPredavacPredavanje" layoutX="79.0" layoutY="388.0" text="Predavac :" visible="false" />
+      <Label fx:id="labelaSadrzajPredavanje" layoutX="17.0" layoutY="466.0" text="Sadrzaj :" visible="false" />
+      <TextField fx:id="temaPredavanjaTxtFld" layoutX="35.0" layoutY="346.0" prefHeight="29.0" prefWidth="145.0" visible="false" />
+      <TextField fx:id="sadrzajPredavanjeTxtFld" layoutX="16.0" layoutY="483.0" prefHeight="74.0" prefWidth="193.0" visible="false" />
+      <Slider fx:id="vrijemePocetkaSlider" disable="true" layoutX="229.0" layoutY="217.0" prefHeight="14.0" prefWidth="209.0" />
+      <Slider fx:id="vrijemeKrajaSlider" disable="true" layoutX="227.0" layoutY="264.0" prefHeight="14.0" prefWidth="209.0" />
+      <RadioButton fx:id="prijePodneBtn" disable="true" layoutX="336.0" layoutY="196.0" mnemonicParsing="false" text="AM" />
+      <RadioButton fx:id="poslijePodneBtn" disable="true" layoutX="386.0" layoutY="196.0" mnemonicParsing="false" text="PM" />
+      <RadioButton fx:id="prijePodne2Btn" disable="true" layoutX="336.0" layoutY="243.0" mnemonicParsing="false" text="AM" />
+      <RadioButton fx:id="poslijePodne2Btn" disable="true" layoutX="387.0" layoutY="243.0" mnemonicParsing="false" text="PM" />
+      <ComboBox fx:id="predavacPredavanjaComboBox" layoutX="31.0" layoutY="406.0" prefWidth="150.0" visible="false" />
+      <Button fx:id="dodajUcesnikaBtn" disable="true" layoutX="383.0" layoutY="435.0" mnemonicParsing="false" onAction="#klikDodajUcesnikaBtn" text="Dodaj" />
+      <ListView fx:id="listaUcesnikaList" disable="true" layoutX="241.0" layoutY="483.0" prefHeight="74.0" prefWidth="193.0" />
+      <Label fx:id="listaDodanihUcesnikaLbl" disable="true" layoutX="243.0" layoutY="466.0" text="Lista dodanih ucesnika :" />
+      <Label fx:id="trajanjeLabel" layoutX="71.0" layoutY="327.0" text="Trajanje (sati) :" visible="false" />
+      <Label fx:id="izvodjaciLabel" layoutX="81.0" layoutY="388.0" text="Izvodjaci :" visible="false" />
+      <ComboBox fx:id="trajanjeComboBox" layoutX="39.0" layoutY="347.0" prefWidth="150.0" visible="false" />
+      <ComboBox fx:id="izvodjaciComboBox" layoutX="39.0" layoutY="406.0" prefWidth="150.0" visible="false" />
+      <Button fx:id="dodajIzvodjaceBtn" layoutX="155.0" layoutY="435.0" mnemonicParsing="false" onAction="#klikDodajIzvodjaceBtn" text="Dodaj" visible="false" />
+      <Label fx:id="listaDodanihIzvodjacaLabel" layoutX="18.0" layoutY="466.0" text="Lista dodanih izvodjaca :" visible="false" />
+      <ListView fx:id="listaDodanihIzvodjacaList" layoutX="17.0" layoutY="483.0" prefHeight="74.0" prefWidth="193.0" visible="false" />
+      <Label fx:id="temaIzlozbaLabel" layoutX="90.0" layoutY="327.0" text="Tema :" visible="false" />
+      <Label fx:id="autorLabel" layoutX="89.0" layoutY="388.0" text="Autor :" visible="false" />
+      <TextField fx:id="temaIzlozbaTxtFld" layoutX="32.0" layoutY="347.0" visible="false" />
+      <TextField fx:id="autorTxtFld" layoutX="32.0" layoutY="406.0" visible="false" />
+      <ListView fx:id="listaDodanihAutoraList" layoutX="13.0" layoutY="483.0" prefHeight="74.0" prefWidth="193.0" visible="false" />
+      <Label fx:id="listaDodanihAutoraLabela" layoutX="13.0" layoutY="466.0" text="Lista dodanih autora :" visible="false" />
+      <Button fx:id="dodajAutoraBtn" layoutX="155.0" layoutY="434.0" mnemonicParsing="false" onAction="#klikDodajAutoreBtn" text="Dodaj" visible="false" />
+      <ListView fx:id="listaDodanihDogadjajaListView" layoutX="10.0" layoutY="483.0" prefHeight="74.0" prefWidth="193.0" visible="false" />
+      <Label fx:id="listaDodanihDogadjajaLabel" layoutX="13.0" layoutY="466.0" text="Lista dodanih dogadjaja :" visible="false" />
+      <ComboBox fx:id="izabraniDogadjajiComboBox" layoutX="31.0" layoutY="406.0" prefHeight="25.0" prefWidth="150.0" visible="false" />
+      <Label fx:id="labelaDogadjaji" layoutX="79.0" layoutY="388.0" text="Dogadjaji :" visible="false" />
+      <Button fx:id="dodajIzabraniDogadjajBtn" layoutX="155.0" layoutY="435.0" mnemonicParsing="false" onAction="#klikDodajDogadjajBtn" text="Dodaj" visible="false" />
+      <Label fx:id="labelaBrojFajlova" disable="true" layoutX="289.0" layoutY="599.0" text="Broj dodanih fajlova :" />
+      <Label fx:id="labelaKolicinaFajlova" disable="true" layoutX="412.0" layoutY="599.0" text="0" />
+   </children>
+</AnchorPane>

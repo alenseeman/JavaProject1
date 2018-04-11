@@ -1,0 +1,29 @@
+import java.util.*;
+import java.io.*;
+
+public class Izlozba extends Dogadjaj
+{
+  protected String tema;
+  protected ArrayList<String> autori;
+  
+  public Izlozba()
+  {
+    super();
+  }
+  
+  public Izlozba(String te,ArrayList<String> aut,String n,Date dp,Date dk,String vp,String vk,String o,Organizator org,ArrayList<Ucesnik>uc,File f)
+  {
+        super(n,dp,dk,vp,vk,o,org,uc,f);
+        tema=te;
+        autori=aut;
+  }
+  
+  public String getTema()
+  {
+    return tema;
+  }
+  public ArrayList<String> getAutori()
+  {
+    return autori;
+  }
+}

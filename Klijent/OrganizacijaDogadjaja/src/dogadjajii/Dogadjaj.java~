@@ -1,0 +1,91 @@
+import java.util.*;
+import java.io.*;
+public class Dogadjaj implements Serializable
+{
+  protected String naziv;
+  protected Date datumPocetka;
+  protected Date datumKraja;
+  protected String vrijemePocetka;
+  protected String vrijemeKraja;
+  protected String opis;
+  protected Organizator organizator;
+  protected ArrayList<Ucesnik> ucesnici;
+  protected File fajl;
+  
+  public Dogadjaj()
+  {
+    super();
+  }
+  
+  public Dogadjaj(String n,Date dp,Date dk,String vp,String vk,String o,Organizator org,ArrayList<Ucesnik>uc,File f)
+  {
+    super();
+    naziv=n;
+    datumPocetka=dp;
+    datumKraja=dk;
+    vrijemePocetka=vp;
+    vrijemeKraja=vk;
+    opis=o;
+    organizator=org;
+    ucesnici=uc;
+    fajl=f;
+  }
+  
+  public String getNaziv()
+  {
+    return naziv;
+  }
+  
+  public void setNaziv(String n)
+  {
+    naziv=n;
+  }
+  
+  public Date getDatumPocetka()
+  {
+    return datumPocetka;
+  }
+  public Date getDatumKraja()
+  {
+    return datumKraja;
+  }
+  public String getVrijemePocetka()
+  {
+    return vrijemePocetka;
+  }
+  public String getVrijemeKraja()
+  {
+    return vrijemeKraja;
+  }
+  public String getOpis()
+  {
+    return opis;
+  }
+  public void setOpis(String o)
+  {
+    opis=o;
+  }
+  public Organizator getOrganizator()
+  {
+    return organizator;
+  }
+  public ArrayList<Ucesnik> getUcesnici()
+  {
+    return ucesnici;
+  }
+ public File getFajl()
+ {
+   return fajl;
+ }
+ 
+ public String toString()
+ {
+   return "Naziv dogadjaja: "+naziv+" Opis: "+opis;
+ }
+ 
+ public static void main(String[] args)
+ {
+   Dogadjaj a=new Dogadjaj();
+   System.out.println("bla");
+ }
+}

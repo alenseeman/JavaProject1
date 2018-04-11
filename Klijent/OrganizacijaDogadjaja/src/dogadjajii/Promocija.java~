@@ -1,0 +1,22 @@
+import java.util.*;
+import java.io.*;
+
+public class Promocija extends Dogadjaj implements KampanjaInterface
+{
+  protected String nazivBrenda;
+  
+  public Promocija()
+  {
+    super();
+  }
+  public Promocija(String nb,String n,Date dp,Date dk,String vp,String vk,String o,Organizator org,ArrayList<Ucesnik>uc,File f)
+  {
+    super(n,dp,dk,vp,vk,o,org,uc,f);
+    nazivBrenda=nb;
+  }
+  
+  public String getNazivBrenda()
+  {
+    return nazivBrenda;
+  }
+}

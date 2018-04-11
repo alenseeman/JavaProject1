@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="organizacijadogadjaja.GlavnaFormaFXMLController">
+   <children>
+      <SplitPane fx:id="splitPane" dividerPositions="0.85" layoutX="172.0" layoutY="91.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="tabelaDogadjaja" layoutX="99.0" layoutY="71.0" prefHeight="341.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="156.0" text="Tabela dogadjaja :" />
+                  <Button fx:id="pokreniKampanjuBtn" disable="true" layoutX="428.0" layoutY="8.0" mnemonicParsing="false" onAction="#klikPokreniKampanju" text="Pokreni kampanju" textAlignment="CENTER" AnchorPane.rightAnchor="50.0" />
+                  <Button fx:id="osvjeziTabeluBtn" layoutX="407.0" layoutY="8.0" mnemonicParsing="false" onAction="#klikOsvjeziTabeluBtn" text="Osvjezi tabelu" AnchorPane.rightAnchor="201.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <Button fx:id="kreirajDogadjajBtn" layoutX="47.0" layoutY="13.0" mnemonicParsing="false" onAction="#klikKreirajDogadjaj" text="Kreiraj novi dogadjaj" AnchorPane.leftAnchor="20.0" />
+                  <Button fx:id="obrisiDogadjajBtn" layoutX="437.0" layoutY="13.0" mnemonicParsing="false" onAction="#klikObrisiDogadjaj" text="Obrisi oznaceni dogadjaj" textAlignment="CENTER" AnchorPane.rightAnchor="20.0" />
+                  <Button fx:id="podaciOsobeBtn" layoutX="292.0" layoutY="13.0" mnemonicParsing="false" onAction="#klikPodaciOsobe" text="Podaci o osobama" AnchorPane.leftAnchor="177.0" />
+                  <Button fx:id="preuzmiListuDogadjajaBtn" layoutX="336.0" layoutY="13.0" mnemonicParsing="false" onAction="#klikPreuzmiListuDogadjaja" text="Preuzmi listu dogadjaja (CSV)" AnchorPane.leftAnchor="321.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

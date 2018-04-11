@@ -1,0 +1,26 @@
+import java.util.*;
+import java.io.*;
+
+public class Napomena implements Serializable
+{
+  protected String datumKreiranja;
+  protected String tekstNapomene;
+  
+  public Napomena(String dk,String tn)
+  {
+    super();
+    datumKreiranja=dk;
+    tekstNapomene=tn;
+  }
+  
+  public String getDatumKreiranja()
+  {
+    return datumKreiranja;
+  }
+  public String getTekstNapomene()
+  {
+    return tekstNapomene;
+  }
+}
+  
+  

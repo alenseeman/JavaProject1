@@ -1,0 +1,3 @@
+Dino,Merlin
+Kyrre,Gørvell-Dahll
+Maitre,Gims

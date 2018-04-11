@@ -1,0 +1,15 @@
+import java.util.*;
+import java.io.*;
+
+public class ListaDogadjaja implements Serializable
+{
+  protected ArrayList<Dogadjaj> dogadjaji;
+  
+  public ListaDogadjaja(ArrayList<Dogadjaj> d)
+  {
+    super();
+    dogadjaji=d;
+  }
+  
+}
+ 

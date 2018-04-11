@@ -1,0 +1,50 @@
+import java.util.*;
+import java.io.*;
+
+public class Predavanja extends Dogadjaj
+{
+  protected String tema;
+  protected String predavac;
+  protected String sadrzaj;
+  
+  public Predavanja()
+  {
+    super();
+  }
+  
+  
+  public Predavanja(String te,String pre,String sa,String n,Date dp,Date dk,String vp,String vk,String o,Organizator org,ArrayList<Ucesnik>uc,File f)
+  {
+    super(n,dp,dk,vp,vk,o,org,uc,f);
+    tema=te;
+    predavac=pre;
+    sadrzaj=sa;
+  }
+  public String getTema()
+  {
+    return tema;
+  }
+  public String getPredavac()
+  {
+    return predavac;
+  }
+  public String getSadrzaj()
+  {
+    return sadrzaj;
+  }
+  
+//  public static void main(String[] args)
+//  {
+//    ArrayList<Napomena> napomena=new ArrayList<Napomena>();
+//    Napomena a=new Napomena("sss","fff");
+//    napomena.add(a);
+//    ArrayList<Ucesnik> ucesnici=new ArrayList<Ucesnik>();
+//    Ucesnik haa=new Ucesnik("org","ime","prezime");
+//    ucesnici.add(haa);
+//    Predavanja a=new Predavanja("a","b","c","d",new Date(),new Date(),"f","g","fd",new Organizator("dsad","ddd",napomena,"ss","dd"),ucesnici,new File());
+//    System.out.println(a);
+//    }
+                                
+  
+}
+    

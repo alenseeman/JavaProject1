@@ -1,0 +1,35 @@
+import java.util.*;
+import java.io.*;
+
+public class Organizator extends Osoba implements Serializable
+{
+  protected String telefon;
+  protected String mail;
+  protected ArrayList<Napomena> napomene;
+  
+  public Organizator()
+  {
+    super();
+  }
+  
+  public Organizator(String tel,String mail,ArrayList<Napomena> nap,String i,String p)
+  {
+    super(i,p);
+    telefon=tel;
+    this.mail=mail;
+    napomene=nap;
+  }
+  
+  public String getTelefon()
+  {
+    return telefon;
+  }
+  public String getMail()
+  {
+    return mail;
+  }
+  public ArrayList<Napomena> getNapomene()
+  {
+    return napomene;
+  }
+}
